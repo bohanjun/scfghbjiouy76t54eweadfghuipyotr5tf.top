@@ -1,0 +1,866 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Zhango Search</title>
+    <link rel="icon" href="data:image/x-icon;base64,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7WkkHO1pJBztaiQc7SskHO0AJBztACQc7QwkHO1cJBztaiQc7WkkHO1pJBztaQn3UP8J91D/CfdQ/wn3UP8J91DhCfdQHgn3UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfdQwAn3UMAJ91DACfdQwQn3UKkJ91AXCfdQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ91AJCfdQCQn3UAkJ91AJCfdQCAn3UAEJ91AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////8D////A////wAMD/8ADA//AAwP/wAMD/8ADA//AAwP/wAMD/8ADA//AAwP/wAMD/8ADA8DAAwPAwAMDwMADA8DAA//AwAP/wMAD/8DAA//AwAP/wMAD/8DAA//AwAP/wMAD/8DAA//AwAP///8D////A/////////8=" type="image/x-icon" />
+    <link rel="shortcut icon" href="data:image/x-icon;base64,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7WkkHO1pJBztaiQc7SskHO0AJBztACQc7QwkHO1cJBztaiQc7WkkHO1pJBztaQn3UP8J91D/CfdQ/wn3UP8J91DhCfdQHgn3UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACfdQwAn3UMAJ91DACfdQwQn3UKkJ91AXCfdQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ91AJCfdQCQn3UAkJ91AJCfdQCAn3UAEJ91AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////////8D////A////wAMD/8ADA//AAwP/wAMD/8ADA//AAwP/wAMD/8ADA//AAwP/wAMD/8ADA8DAAwPAwAMDwMADA8DAA//AwAP/wMAD/8DAA//AwAP/wMAD/8DAA//AwAP/wMAD/8DAA//AwAP///8D////A/////////8=" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://static.piterator.com/node_modules/semantic-ui-css/semantic.min.css" />
+    <script src="https://static.piterator.com/node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="https://static.piterator.com/node_modules/semantic-ui-css/semantic.min.js"></script>
+    <style>
+        html,body{height: 100%;}
+        ::selection{
+            background-color: #cce2ff;
+            color: rgba(0,0,0,.87);
+        }
+        ::-webkit-scrollbar{
+            width: 6px!important;
+        }
+        *{
+            font-family: "Microsoft Yahei","Inconsolata","Courier";
+            font-weight: 400;
+            outline: none;
+            border: none;
+        }
+        .container{
+            width: 72%;
+        }
+        .lighter{
+            font-weight: 100;
+        }
+        .bolder{
+            font-weight: 700;
+        }
+        .header{
+            font-size: 2em;
+        }
+        .left{
+            text-align: left;
+        }
+        .center{
+            text-align: center;
+            margin: auto;
+        }
+        .right{
+            text-align: right;
+        }
+        .link{
+            color: rgb(33,133,208);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .link:hover{
+            color: rgb(0,93,168)!important;
+            text-decoration: underline;
+        }
+        .link:visited{
+            color: rgb(33,133,208);
+            text-decoration: underline;
+        }
+        .teal{
+            color: rgb(0,181,173);
+            border-color: rgb(0,181,173);
+        }
+        .button.reversal.teal{
+            background-color: rgb(0,181,173)!important;
+            border-color: rgb(0,181,173);
+            color: rgb(248,248,248)!important;
+        }
+        .link.teal:hover,.button.teal:hover{
+            color: rgb(0,141,133)!important;
+        }
+        .button.reversal.teal:hover{
+            background-color: rgb(10,191,183)!important;
+            border-color: rgb(10,191,183);
+            color: rgb(248,248,248)!important;
+        }
+        .link.teal{
+            color: rgb(0,181,173);
+        }
+        .link.teal:visited{
+            color: rgb(0,181,173);
+        }
+        .button{
+            display: inline-flex;
+            border-radius: .3em;
+            border: 2px solid;
+            min-width: 5.2em;
+            padding-left: .6em;
+            padding-right: .6em;
+            height: 1.8em;
+            margin-bottom: .4em;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            font-weight: inherit;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .divider:not(.ui){
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: rgb(158,158,158);
+            box-sizing: border-box;
+        }
+        .divider.vertical:not(.ui){
+            display: inline-block;
+            height: auto!important;
+            width: 1px!important;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: rgb(158,158,158);
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .holders{
+            position: relative;
+            height: 42px;
+            min-width: 580px;
+            width: 40%;
+            margin: auto;
+            text-align: center;
+        }
+        #search_box{
+            height: 42px;
+            width: 100%;
+            display: block;
+            margin-top: .6em;
+            border-radius: 12px;
+            border: 1.5px solid rgb(0,181,173);
+            color: rgb(0,181,173);
+            padding-left: 12px;
+            padding-right: 96px;
+            box-sizing: border-box;
+            font-weight: 400;
+            outline: none;
+            transition: ease-out padding-right .2s,ease-out border-radius .2s;
+            z-index: 1;
+        }
+        #search_btn{
+            height: 42px;
+            width: 88px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            border: 1.5px solid rgb(0,181,173);
+            box-sizing: border-box;
+            font-weight: 400;
+            border-radius: 0px 12px 12px 0px;
+            transition: ease-out background-color .1s,ease-out width .2s,ease-out border-radius .2s;
+            z-index: 2;
+        }
+        .engines,.dflt_engines{
+            height: 42px;
+            border: 1.5px solid rgb(0,181,173);
+            box-sizing: border-box;
+            font-weight: 400;
+            margin-left: .0625em;
+            margin-right: .0625em;
+        }
+        .engines_holders{
+            height: 47px;
+        }
+        .large-links{
+            text-decoration: none;
+        }
+        #pi-logo-font{
+            position: relative;
+            font-size: 1.36em;
+            font-weight: 400!important;
+        }
+        #top-search-box{
+            position: fixed;
+            top: 0px;
+            height: 60px;
+            width: 100%;
+            background-color: #fff;
+        }
+        #main-holder{
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            z-index: 1;
+        }
+        .button-selects.teal{
+            font-weight: 100;
+            font-size: 1em;
+            min-width: 3.6em;
+            padding-left: .3em;
+            padding-right: .3em;
+            padding-top: .2em;
+            padding-bottom: .2em;
+            margin-left: .2em;
+            margin-right: .2em;
+            margin-top: .2em;
+            margin-bottom: .2em;
+            color: rgb(0,181,173);
+            background: rgba(255,255,255,.9);
+            border-radius: .3em;
+            height: max-content;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: ease-out background-color .1s;
+        }
+        .button-selects.teal:hover{
+            color: rgb(0,181,173);
+            background: #f5f9fd;
+        }
+        .button-selects.teal:active{
+            color: #fff;
+            background: rgb(0,171,163);
+        }
+        .button-selects.teal.reversal{
+            color: #fff;
+            background: rgb(0,181,173);
+        }
+        #search_form{
+            position: relative;
+            top: 1px;
+            transition: ease-out top .2s
+        }
+        #search_form:focus-within{
+            top: -2px;
+        }
+        #search_form:focus-within>#search_btn{
+            width: 108px;
+            border-radius: 0px 21px 21px 0px;
+        }
+        #search_btn:hover{
+            width: 108px;
+        }
+        #search_form:focus-within>#search_box{
+            padding-right: 116px;
+            border-radius: 21px;
+        }
+        #search_btn:hover+#search_box{
+            padding-right: 116px;
+        }
+        #search_btn:active{
+            background-color: rgb(0,171,163)!important;
+        }
+        #search_box::-moz-placeholder{
+            color: rgb(117,117,117);
+        }
+        .large-links{
+            white-space: nowrap;
+        }
+        #tab-common>table>tbody>tr>td:not(.left-header){
+            text-align: center;
+        }
+        body>*:not(#main-holder):not(#bottom-time){
+            display: none!important;
+            visibility: hidden!important;
+            max-width: 0px!important;
+            max-height: 0px!important;
+        }
+        .top-bar-header{
+            font-weight: 400!important;
+        }
+        #sitetime::after{
+            content: attr(data-time);
+        }
+    </style>
+</head>
+<body onkeypress="if(event.keyCode==13)start()" style="position: relative; visibility: hidden;" id="main-body" tabindex="-1">
+    <div id="main-holder">
+        <div id="main-large-search" style="height: 180px; box-sizing: border-box; background-color: #fff;">
+            <div style="height: 72px; box-sizing: border-box;" id="main-over-top"></div>
+            <h1 class="header teal center" style="font-weight: 100;" id="main-header">Zhango Search</h1>
+            <div class="holders" id="search_form">
+                <button class="button teal reversal" id="search_btn" onclick="start()" tabindex="-1"><span style="font-weight: 100; font-size: 1.5em; position: relative; top: -.06em;">π</span>一下</button>
+                <input id="search_box" name="search_box" placeholder="搜索无需繁琐" oninput="url_replace()" autocomplete="off" value="" tabindex="200" />
+            </div>
+        </div>
+        <div style="height: 55px; box-sizing: border-box; background-color: #fff;" id="main-below-top"></div>
+        <div id="main-large-links" style="width: 40%; margin: auto; min-width: 580px; background-color: #fff;">
+            <div class="ui secondary pointing menu">
+                <a class="item active top-bar-header" data-tab="tab-common" onfocus="page_pos='',url_replace(),set_page_pos()" id="bar-common" tabindex="101">常用</a>
+                <a class="item top-bar-header" data-tab="tab-bookmarks" onfocus="page_pos='bookmarks',url_replace(),set_page_pos()" id="bar-bookmarks" tabindex="102">书签</a>
+                <a class="item top-bar-header" data-tab="tab-friends" onfocus="page_pos='friends',url_replace(),set_page_pos()" id="bar-friends" tabindex="103">友链</a>
+                <a class="item top-bar-header" data-tab="tab-news" onfocus="page_pos='news',url_replace(),set_page_pos()" id="bar-news" tabindex="104">新闻</a>
+                <a class="item top-bar-header" data-tab="tab-about" onfocus="page_pos='about',url_replace(),set_page_pos()" id="bar-about" tabindex="105">关于</a>
+                <a class="item top-bar-header" data-tab="tab-setting" onfocus="page_pos='setting',url_replace(),set_page_pos()" id="bar-setting" tabindex="106">设置</a>
+            </div>
+            <div class="ui tab segment active main-tabs" data-tab="tab-common" id="tab-common">
+                <table class="ui celled striped table">
+                    <tbody>
+                        <tr>
+                            <td class="collapsing left-header" style="text-align: center;">推荐</td>
+                            <td>
+                                <a class="link teal large-links" target="_blank" href="https://www.piterator.com/" tabindex="-1">Piterator</a>
+                                <a class="link teal large-links" target="_blank" href="https://oj.piterator.com/" tabindex="-1">PiOJ</a>
+                                <a class="link teal large-links" target="_blank" href="https://nazo.oier.fun/" rel="external nofollow" tabindex="-1">OierNazo</a>
+                                <a class="link teal large-links" target="_blank" href="https://logo.oier.fun/" rel="external nofollow" tabindex="-1">OierLogo</a>
+                                <a class="link teal large-links" target="_blank" href="https://periodic.oier.fun/" tabindex="-1">元素周期表</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="collapsing left-header" style="text-align: center;">娱乐</td>
+                            <td>
+                                <a class="link teal large-links" target="_blank" href="https://www.bilibili.com/" rel="external nofollow" tabindex="-1">哔哩哔哩</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.iqiyi.com/" rel="external nofollow" tabindex="-1">爱奇艺</a>
+                                <a class="link teal large-links" target="_blank" href="https://v.qq.com/" rel="external nofollow" tabindex="-1">腾讯视频</a>
+                                <a class="link teal large-links" target="_blank" href="https://2048.org/" rel="external nofollow" tabindex="-1">2048</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.acfun.cn/" rel="external nofollow" tabindex="-1">AcFun</a>
+                                <a class="link teal large-links" target="_blank" href="https://movie.douban.com/" rel="external nofollow" tabindex="-1">豆瓣电影</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.hao4k.cn/" rel="external nofollow" tabindex="-1">Hao4K</a>
+                                <a class="link teal large-links" target="_blank" href="https://weibo.com/" rel="external nofollow" tabindex="-1">微博</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="collapsing left-header" style="text-align: center;">工具</td>
+                            <td>
+                                <a class="link teal large-links" target="_blank" href="https://github.com/" rel="external nofollow" tabindex="-1">GitHub</a>
+                                <a class="link teal large-links" target="_blank" href="https://gitee.com/" rel="external nofollow" tabindex="-1">Gitee</a>
+                                <a class="link teal large-links" target="_blank" href="https://gitlab.com/" rel="external nofollow" tabindex="-1">GitLab</a>
+                                <a class="link teal large-links" target="_blank" href="https://periodic.oier.fun/" rel="external nofollow" tabindex="-1">元素周期表</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.youdao.com/" rel="external nofollow" tabindex="-1">有道词典</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="collapsing left-header" style="text-align: center;">服务</td>
+                            <td>
+                                <a class="link teal large-links" target="_blank" href="https://www.aliyun.com/" rel="external nofollow" tabindex="-1">阿里云</a>
+                                <a class="link teal large-links" target="_blank" href="https://cloud.tencent.com/" rel="external nofollow" tabindex="-1">腾讯云</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.cloudflare.com/zh-cn/" rel="external nofollow" tabindex="-1">Cloudflare</a>
+                                <a class="link teal large-links" target="_blank" href="https://cloud.baidu.com/" rel="external nofollow" tabindex="-1">百度智能云</a>
+                                <a class="link teal large-links" target="_blank" href="https://coding.net/" rel="external nofollow" tabindex="-1">Coding</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="collapsing left-header" style="text-align: center;">学习</td>
+                            <td>
+                                <a class="link teal large-links" target="_blank" href="https://www.zhihu.com/" rel="external nofollow" tabindex="-1">知乎</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.luogu.com.cn/" rel="external nofollow" tabindex="-1">洛谷</a>
+                                <a class="link teal large-links" target="_blank" href="https://ti.luogu.com.cn/" rel="external nofollow" tabindex="-1">洛谷有题</a>
+                                <a class="link teal large-links" target="_blank" href="https://class.luogu.com.cn/course" rel="external nofollow" tabindex="-1">洛谷网校</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.wikihow.com/Main-Page" rel="external nofollow" tabindex="-1">WikiHow</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.jianshu.com/" rel="external nofollow" tabindex="-1">简书</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.ximalaya.com/" rel="external nofollow" tabindex="-1">喜马拉雅FM</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="collapsing left-header" style="text-align: center;">技术</td>
+                            <td>
+                                <a class="link teal large-links" target="_blank" href="https://www.runoob.com/" rel="external nofollow" tabindex="-1">菜鸟教程</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.csdn.net/" rel="external nofollow" tabindex="-1">CSDN</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.oschina.net/" rel="external nofollow" tabindex="-1">OSCHINA</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.w3school.com.cn/" rel="external nofollow" tabindex="-1">W3school</a>
+                                <a class="link teal large-links" target="_blank" href="https://stackoverflow.com/" rel="external nofollow" tabindex="-1">StackOverFlow</a>
+                                <a class="link teal large-links" target="_blank" href="https://segmentfault.com/" rel="external nofollow" tabindex="-1">SegmentFault</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.v2ex.com/" rel="external nofollow" tabindex="-1">V2EX</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="collapsing left-header" style="text-align: center;">购物</td>
+                            <td>
+                                <a class="link teal large-links" target="_blank" href="https://www.taobao.com/" rel="external nofollow" tabindex="-1">淘宝网</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.tmall.com/" rel="external nofollow" tabindex="-1">天猫</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.jd.com/" rel="external nofollow" tabindex="-1">京东</a>
+                                <a class="link teal large-links" target="_blank" href="https://chaoshi.tmall.com/" rel="external nofollow" tabindex="-1">天猫超市</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.tmall.hk/" rel="external nofollow" tabindex="-1">天猫国际</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.suning.com/" rel="external nofollow" tabindex="-1">苏宁易购</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.yhd.com/" rel="external nofollow" tabindex="-1">1号店</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="collapsing left-header" style="text-align: center;">域名</td>
+                            <td>
+                                <a class="link teal large-links" target="_blank" href="https://namebeta.com/" rel="external nofollow" tabindex="-1">NameBeta</a>
+                                <a class="link teal large-links" target="_blank" href="https://wanwang.aliyun.com/" rel="external nofollow" tabindex="-1">万网(阿里云)</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.west.cn/" rel="external nofollow" tabindex="-1">西部数码</a>
+                                <a class="link teal large-links" target="_blank" href="https://www.dnspod.cn/" rel="external nofollow" tabindex="-1">DNSPod(腾讯云)</a>
+                                <a class="link teal large-links" target="_blank" href="https://cloud.baidu.com/product/bcd/search.html" rel="external nofollow" tabindex="-1">百度智能云域名服务</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui tab segment main-tabs" data-tab="tab-bookmarks" id="tab-bookmarks">即将上线，敬请期待</div>
+            <div class="ui tab segment main-tabs" data-tab="tab-friends" id="tab-friends">即将上线，敬请期待</div>
+            <div class="ui tab segment main-tabs" data-tab="tab-news" id="tab-news">
+                <style>
+                    .juicy.cards{
+                        display: flex;
+                    }
+                    .juicy.cards .card,
+                    .juicy.card{
+                        display: block;
+                        width: calc(100% / 3 - 1em);
+                        background-color: #fff;
+                        border-radius: .4em;
+                        border: 1px solid rgb(217,217,217);
+                        padding-top: .5em;
+                        padding-bottom: .5em;
+                        box-sizing: border-box;
+                        text-align: left;
+                    }
+                    .juicy.cards a.card,
+                    a.juicy.card,
+                    .juicy.cards a.card .divider,
+                    a.juicy.card .divider{
+                        cursor: pointer;
+                    }
+                    .juicy.cards a.card:hover,
+                    a.juicy.card:hover{
+                        border-color: rgb(156,199,240);
+                    }
+                    .juicy.cards a.card:hover>.divider,
+                    a.juicy.card:hover>.divider{
+                        border-top: 1px solid rgb(156,199,240);
+                    }
+                    .juicy.cards .card{
+                        height: min-content;
+                        margin-left: .25em;
+                        margin-right: .25em;
+                    }
+                    .juicy.cards .card>.header,
+                    .juicy.card>.header{
+                        display: block;
+                        font-weight: 600;
+                        font-size: 1.1em;
+                        color: rgb(0,0,0);
+                        margin-left: .8em;
+                        margin-right: .8em;
+                        font-weight: 400;
+                    }
+                    .juicy.cards .card>.meta,
+                    .juicy.card>.meta{
+                        display: block;
+                        font-size: .85em;
+                        color: rgb(153,153,153);
+                        margin-left: .8em;
+                        margin-right: .8em;
+                    }
+                    .juicy.cards .card>.content,
+                    .juicy.card>.content{
+                        display: block;
+                        font-size: .9em;
+                        color: rgb(0,0,0);
+                        margin-top: .4em;
+                        margin-bottom: .4em;
+                        margin-left: .8em;
+                        margin-right: .8em;
+                    }
+                    .juicy.cards .card>.divider,
+                    .juicy.card>.divider{
+                        display: block;
+                        height: 0;
+                        margin: .5em 0;
+                        overflow: hidden;
+                        border-top: 1px solid rgb(217,217,217);
+                        cursor: default;
+                    }
+                    .juicy.cards .card>.content.extra,
+                    .juicy.card>.content.extra{
+                        color: rgb(0, 0, 0);
+                        margin-top: .2em;
+                        margin-bottom: .2em;
+                    }
+                    .juicy.cards .card>.content.extra>.date.right,
+                    .juicy.card>.content.extra>.date.right{
+                        float: right;
+                    }
+                </style>
+                <div class="juicy cards">
+                    <a class="card" href="https://www.piterator.com/" target="_blank" rel="external nofollow" tabindex="-1">
+                        <span class="header">一群 OIer 居然在一起做这种事情！</span>
+                        <span class="meta">网友：这届 OIer 尺度太大了吧！</span>
+                        <p class="content">
+                            Piterator 是一个沉迷于 <span style="white-space: nowrap;">€€£</span> 主办的 NOIP，呃，不对，是 CSP 无法自拔以致于没有时间维护网站的团队。我们因为共同爱好（赚钱）而聚集在一起。赶紧来骚扰我们吧！
+                        </p>
+                        <div class="divider"></div>
+                        <div class="extra content">
+                            <span class="date right">2020-7-1</span>
+                        </div>
+                    </a>
+                    <a class="card" href="https://icelava.piterator.com/" target="_blank" rel="external nofollow" tabindex="-1">
+                        <span class="header">什么？IceLava 居然有了国内低延迟非同步节点？</span>
+                        <span class="meta">ForkKILLET：钛刺激辽！</span>
+                        <p class="content">
+                            蛤，你问 IceLava 是什么？<br />就是一个开发东西的团队啦！<br />此外，IceLava 团队的成员 ForkKILLET 也把他的 blog 搭建在这里了~ 其中有他的算法笔记、题解等内容，欢迎大佬指教！
+                        </p>
+                        <div class="divider"></div>
+                        <div class="extra content">
+                            <span class="date right">2020-7-1</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="ui tab segment main-tabs" data-tab="tab-about" id="tab-about">
+                <p style="text-align: center; line-height: 1.8em;" class="teal">
+                    Copyright &copy;
+                    <a class="link teal" target="_blank" href="https://www.piterator.com/" tabindex="-1">Piterator</a> 2017 - 2020. 
+                    <br />
+                    <a class="link teal" target="_blank" href="https://pisearch.cn/">Pi Search</a> 由 <a class="link teal" target="_blank" href="https://www.piterator.com/" tabindex="-1">Piterator</a>
+                    的成员博瀚君开发
+                    <br />
+                    All rights reserved. 保留所有权利
+                    <br />
+                    <a class="link teal" target="_blank" href="https://github.com/bohanjun/PiSearch/" rel="external nofollow" tabindex="-1">GitHub 开源仓库</a>
+                    ·
+                    <a class="link teal" target="_blank" href="https://gitlab.com/bohanjun/PiSearch/" rel="external nofollow" tabindex="-1">GitLab 开源仓库</a>
+                    <br />
+                    Version &beta;eta 0.2.20&beta;0808.0
+                </p>
+            </div>
+            <div class="ui tab segment main-tabs" data-tab="tab-setting" id="tab-setting">
+                <h3 class="teal center" style="font-weight: 400;">搜索引擎偏好</h3>
+                <p class="center" style="margin-bottom: .4em;"><span class="teal center link" onclick="default_engine(),url_replace()" tabindex="-1" style="font-weight: 100;">恢复默认搜索引擎</span></p>
+                <span class="button-selects teal reversal engines" id="engine_0" onclick="set_engine(0),url_replace()">百度</span>
+                <span class="button-selects teal engines" id="engine_1" onclick="set_engine(1),url_replace()">必应国内版</span>
+                <span class="button-selects teal engines" id="engine_2" onclick="set_engine(2),url_replace()">必应国际版</span>
+                <span class="button-selects teal engines" id="engine_3" onclick="set_engine(3),url_replace()">360搜索</span>
+                <span class="button-selects teal engines" id="engine_4" onclick="set_engine(4),url_replace()">搜狗搜索</span>
+                <span class="button-selects teal engines" id="engine_5" onclick="set_engine(5),url_replace()">GitHub</span>
+                <span class="button-selects teal engines" id="engine_6" onclick="set_engine(6),url_replace()">码云 Gitee</span>
+                <span class="button-selects teal engines" id="engine_7" onclick="set_engine(7),url_replace()">OSCHINA</span>
+                <span class="button-selects teal engines" id="engine_8" onclick="set_engine(8),url_replace()">有道词典</span>
+                <span class="button-selects teal engines" id="engine_9" onclick="set_engine(9),url_replace()">萌娘百科</span>
+                <span class="button-selects teal engines" id="engine_10" onclick="set_engine(10),url_replace()">DNSPod 域名注册</span>
+                <span class="button-selects teal engines" id="engine_11" onclick="set_engine(11),url_replace()">万网域名注册</span>
+                <span class="button-selects teal engines" id="engine_12" onclick="set_engine(12),url_replace()">知乎</span>
+                <span class="button-selects teal engines" id="engine_13" onclick="set_engine(13),url_replace()">哔哩哔哩</span>
+                <span class="button-selects teal engines" id="engine_14" onclick="set_engine(14),url_replace()">洛谷</span>
+                <span class="button-selects teal engines" id="engine_15" onclick="set_engine(15),url_replace()">CSDN</span>
+                <span class="button-selects teal engines" id="engine_16" onclick="set_engine(16),url_replace()">淘宝网</span>
+                <span class="button-selects teal engines" id="engine_17" onclick="set_engine(17),url_replace()">京东</span>
+                <span class="button-selects teal engines" id="engine_18" onclick="set_engine(18),url_replace()">1号店</span>
+                <span class="button-selects teal engines" id="engine_19" onclick="set_engine(19),url_replace()">天猫</span>
+                <span class="button-selects teal engines" id="engine_20" onclick="set_engine(20),url_replace()">Google</span>
+                <span class="button-selects teal engines" id="engine_21" onclick="set_engine(21),url_replace()">维基百科</span>
+                <span class="button-selects teal engines" id="engine_22" onclick="set_engine(22),url_replace()">YouTube</span>
+                <span class="button-selects teal engines" id="engine_23" onclick="set_engine(23),url_replace()">NameBeta</span>
+                <span class="button-selects teal engines" id="engine_24" onclick="set_engine(24),url_replace()">百度图片</span>
+                <span class="button-selects teal engines" id="engine_25" onclick="set_engine(25),url_replace()">GitLab</span>
+                <span class="button-selects teal engines" id="engine_26" onclick="set_engine(26),url_replace()">WikiHow</span>
+                <div style="height: 6px; box-sizing: border-box;"></div>
+                <h3 class="teal center" style="margin-bottom: .2em; font-weight: 400;">默认搜索引擎偏好</h3>
+                <span class="button-selects teal reversal dflt_engines" id="default_engine_0" onclick="set_default_engine(0),url_replace()">百度</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_1" onclick="set_default_engine(1),url_replace()">必应国内版</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_2" onclick="set_default_engine(2),url_replace()">必应国际版</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_3" onclick="set_default_engine(3),url_replace()">360搜索</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_4" onclick="set_default_engine(4),url_replace()">搜狗搜索</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_5" onclick="set_default_engine(5),url_replace()">GitHub</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_6" onclick="set_default_engine(6),url_replace()">码云 Gitee</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_7" onclick="set_default_engine(7),url_replace()">OSCHINA</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_8" onclick="set_default_engine(8),url_replace()">有道词典</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_9" onclick="set_default_engine(9),url_replace()">萌娘百科</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_10" onclick="set_default_engine(10),url_replace()">DNSPod 域名注册</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_11" onclick="set_default_engine(11),url_replace()">万网域名注册</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_12" onclick="set_default_engine(12),url_replace()">知乎</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_13" onclick="set_default_engine(13),url_replace()">哔哩哔哩</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_14" onclick="set_default_engine(14),url_replace()">洛谷</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_15" onclick="set_default_engine(15),url_replace()">CSDN</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_16" onclick="set_default_engine(16),url_replace()">淘宝网</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_17" onclick="set_default_engine(17),url_replace()">京东</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_18" onclick="set_default_engine(18),url_replace()">1号店</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_19" onclick="set_default_engine(19),url_replace()">天猫</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_20" onclick="set_default_engine(20),url_replace()">Google</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_21" onclick="set_default_engine(21),url_replace()">维基百科</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_22" onclick="set_default_engine(22),url_replace()">YouTube</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_23" onclick="set_default_engine(23),url_replace()">NameBeta</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_24" onclick="set_default_engine(24),url_replace()">百度图片</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_25" onclick="set_default_engine(25),url_replace()">GitLab</span>
+                <span class="button-selects teal dflt_engines" id="default_engine_26" onclick="set_default_engine(26),url_replace()">WikiHow</span>
+            </div>
+            <div class="ui tab segment" data-tab="null"></div>
+        </div>
+        <div style="height: 24px; box-sizing: border-box;"></div>
+    </div>
+    <div class="teal" style="position: fixed; bottom: 10px; width: 100%; min-width: 560px;" id="bottom-time">
+        <div style="height: 10px; box-sizing: border-box;"></div>
+        <p style="text-align: center">
+            <span id="sitetime" style="font-weight: 100;" data-time=""></span>
+        </p>
+    </div>
+    <script type="text/javascript">
+        $('.menu .item').tab();
+        var default_engine_id=0,engine_id=-1,has_folded=0,path_obj="https://scfghbjiouy76t54eweadfghuipyotr5tf.top/",page_pos="";
+        function set_cookie(){
+            // localStorage.removeItem("engine");
+            localStorage.removeItem("default_engine");
+            // localStorage.setItem("engine",engine_id);
+            localStorage.setItem("default_engine",default_engine_id);
+        }
+        function path_encode(url){
+            return url.replace(/%/g,'%25')//必须在最前面
+                      .replace(/#/g,'%23')
+                      .replace(/\$/g,'%24')
+                      .replace(/&/g,'%26')
+                      .replace(/\+/g,'%2B')
+                      .replace(/,/g,'%2C')
+                      .replace(/\//g,'%2F')
+                      .replace(/:/g,'%3A')
+                      .replace(/=/g,'%3D')
+                      .replace(/\?/g,'%3F')
+                      .replace(/@/g,'%40')
+                      .replace(/\[/g,'%5B')
+                      .replace(/\\/g,'%5C')
+                      .replace(/\]/g,'%5D')
+                      .replace(/\^/g,'%5E')
+                      .replace(/`/g,'%60')
+                      .replace(/{/g,'%7B')
+                      .replace(/}/g,'%7D');
+        }
+        function get_url_jump(temp_engine_id,temp_key_final,do_dfs=1){
+            var ret_url_jump="";
+            if(temp_engine_id==0)ret_url_jump="https://www.baidu.com/s?ie=utf-8&wd="+temp_key_final;
+            else if(temp_engine_id==1)ret_url_jump="https://cn.bing.com/search?ensearch=0&q="+temp_key_final;
+            else if(temp_engine_id==2)ret_url_jump="https://cn.bing.com/search?ensearch=1&q="+temp_key_final;
+            else if(temp_engine_id==3)ret_url_jump="https://www.so.com/s?q="+temp_key_final;
+            else if(temp_engine_id==4)ret_url_jump="https://www.sogou.com/web?query="+temp_key_final;
+            else if(temp_engine_id==5)ret_url_jump="https://github.com/search?q="+temp_key_final;
+            else if(temp_engine_id==6)ret_url_jump="https://search.gitee.com/?q="+temp_key_final;
+            else if(temp_engine_id==7)ret_url_jump="https://www.oschina.net/search?scope=all&q="+temp_key_final;
+            else if(temp_engine_id==8)ret_url_jump="https://www.youdao.com/w/"+temp_key_final;
+            else if(temp_engine_id==9)ret_url_jump="https://zh.moegirl.org/index.php?search="+temp_key_final;
+            else if(temp_engine_id==10)ret_url_jump="https://buy.cloud.tencent.com/domain?domain="+temp_key_final;
+            else if(temp_engine_id==11)ret_url_jump="https://wanwang.aliyun.com/domain/searchresult/#/?keyword="+temp_key_final;
+            else if(temp_engine_id==12)ret_url_jump="https://www.zhihu.com/search?type=content&q="+temp_key_final;
+            else if(temp_engine_id==13)ret_url_jump="https://search.bilibili.com/all?keyword="+temp_key_final;
+            else if(temp_engine_id==14)ret_url_jump="https://www.luogu.com.cn/problem/list?keyword="+temp_key_final;
+            else if(temp_engine_id==15)ret_url_jump="https://so.csdn.net/so/search/s.do?q="+temp_key_final;
+            else if(temp_engine_id==16)ret_url_jump="https://s.taobao.com/search?q="+temp_key_final;
+            else if(temp_engine_id==17)ret_url_jump="https://search.jd.com/Search?enc=utf-8&keyword="+temp_key_final+"&wq="+temp_key_final;
+            else if(temp_engine_id==18)ret_url_jump="https://search.yhd.com/c0-0/k"+temp_key_final;
+            else if(temp_engine_id==19)ret_url_jump="https://list.tmall.com/search_product.htm?q="+temp_key_final;
+            else if(temp_engine_id==20)ret_url_jump="https://www.google.com/search?q="+temp_key_final;
+            else if(temp_engine_id==21)ret_url_jump="https://zh.wikipedia.org/w/index.php?search="+temp_key_final;
+            else if(temp_engine_id==22)ret_url_jump="https://www.youtube.com/results?search_query="+temp_key_final;
+            else if(temp_engine_id==23)ret_url_jump="https://namebeta.com/search/"+temp_key_final;
+            else if(temp_engine_id==24)ret_url_jump="https://image.baidu.com/search/index?tn=baiduimage&word="+temp_key_final;
+            else if(temp_engine_id==25)ret_url_jump="https://gitlab.com/search?utf8=%E2%9C%93&search="+temp_key_final;
+            else if(temp_engine_id==26)ret_url_jump="https://www.wikihow.com/wikiHowTo?search="+temp_key_final;
+            else if(do_dfs)return get_url_jump(default_engine_id,temp_key_final,0);
+            return ret_url_jump;
+        }
+        function start(){
+            var url_jump,key_final=path_encode(document.getElementById("search_box").value);
+            if(key_final=="")return;
+            url_jump=get_url_jump(engine_id,key_final);
+            window.open(url_jump);
+        }
+        function engines_fold(){
+            has_folded=1-has_folded;
+            if(has_folded){
+                $("#engines_fold").html("展开");
+                $("#engines_fold").removeClass("reversal");
+                $(".engines_holders").css("display","none");
+                $("#enghld_"+engine_holder_id).css("display","block");
+            }else{
+                $("#engines_fold").html("折叠");
+                $("#engines_fold").addClass("reversal");
+                $(".engines_holders").css("display","block");
+            }
+        }
+        function get_pos_title_before(){
+            if(page_pos=="bookmarks")return "书签 · ";
+            else if(page_pos=="friends")return "友链 · ";
+            else if(page_pos=="about")return "关于 · ";
+            else if(page_pos=="setting")return "设置 · ";
+            else if(page_pos=="news")return "新闻 · ";
+            else return "";
+        }
+        function set_page_pos(){
+            $(".top-bar-header").removeClass("active");
+            $(".main-tabs").removeClass("active");
+            if(page_pos=="")$("#bar-common").addClass("active"),$("#tab-common").addClass("active");
+            else $("#bar-"+page_pos).addClass("active"),$("#tab-"+page_pos).addClass("active");
+        }
+        function url_replace(){
+            var temp_url=path_obj+page_pos
+            // +(engine_id!=-1&&engine_id!=default_engine_id?"?e="+engine_id:"")
+            +(document.getElementById("search_box").value!=""?(engine_id!=-1&&engine_id!=default_engine_id?"&":"?")
+            +"q="+path_encode(document.getElementById("search_box").value):"");
+            if(document.domain=="")console.log(temp_url);
+            else history.replaceState({},get_pos_title_before()+"Zhango Search",temp_url);
+            $("title").text(get_pos_title_before()+"Zhango Search");
+        }
+        function get_url(){
+            return path_obj+page_pos
+            // +(engine_id!=-1&&engine_id!=default_engine_id?"?e="+engine_id:"")
+            +(document.getElementById("search_box").value!=""?(engine_id!=-1&&engine_id!=default_engine_id?"&":"?")
+            +"q="+path_encode(document.getElementById("search_box").value):"");
+        }
+        // function search_text_change(from_box){
+        //     if(from_box=="main")document.getElementById("search_box_top").value=document.getElementById("search_box").value;
+        //     else if(from_box=="top")document.getElementById("search_box").value=document.getElementById("search_box_top").value;
+        // }
+        function set_engine_css(temp_engine_id,do_dfs=1){
+            if(temp_engine_id==-1){if(do_dfs==1)set_engine_css(default_engine_id,0);}
+            else{
+                $(".engines").removeClass("reversal");
+                $("#engine_"+temp_engine_id).addClass("reversal");
+            }
+        }
+        function default_engine(){
+            engine_id=-1;
+            set_engine_css(default_engine_id);
+            set_cookie();
+        }
+        function set_engine(temp_engine_id){
+            if(temp_engine_id==default_engine_id)engine_id=-1;
+            else engine_id=temp_engine_id;
+            set_engine_css(temp_engine_id);
+            set_cookie();
+        }
+        function set_default_engine(temp_engine_id,do_set_cookie=1){
+            if(engine_id==-1)engine_id=default_engine_id;
+            default_engine_id=temp_engine_id;
+            $(".dflt_engines").removeClass("reversal");
+            $("#default_engine_"+temp_engine_id).addClass("reversal");
+            if(engine_id==temp_engine_id)engine_id=-1;
+            if(do_set_cookie)set_cookie();
+        }
+        function name_to_id(name){
+            if(name=="baidu")return 0;
+            else if(name=="bing")return 1;
+            else if(name=="bing-global"||name=="bing_global"||name=="bingglobal")return 2;
+            else if(name=="360")return 3;
+            else if(name=="sogou"||name=="sougou")return 4;
+            else if(name=="github")return 5;
+            else if(name=="gitee")return 6;
+            else if(name=="oschina")return 7;
+            else if(name=="youdao")return 8;
+            else if(name=="moegirl")return 9
+            else if(name=="dnspod")return 10;
+            else if(name=="wanwang")return 11;
+            else if(name=="zhihu")return 12;
+            else if(name=="bili"||name=="bilibili")return 13;
+            else if(name=="luogu")return 14;
+            else if(name=="csdn")return 15;
+            else if(name=="taobao")return 16;
+            else if(name=="jd"||name=="jingdong")return 17;
+            else if(name=="1hd"||name=="yhd"||name=="1haodian"||name=="yihaodian")return 18;
+            else if(name=="tmall"||name=="tianmao")return 19;
+            else if(name=="google")return 20;
+            else if(name=="wiki"||name=="wikipedia")return 21;
+            else if(name=="youtube")return 22;
+            else if(name=="namebeta"||name=="domain")return 23;
+            else if(name=="baidu-image"||name=="baidu_image"||name=="baiduimage")return 24;
+            else if(name=="gitlab")return 25;
+            else if(name=="wikihow")return 26;
+            else return -1;
+        }
+        window.onload=function onload_run(){
+            // if(document.domain!="localhost"&&document.domain!=""&&document.domain!="pisearch.cn")window.location.href="https://pisearch.cn/";
+            var UserAgentT=navigator.userAgent;
+            if(UserAgentT.indexOf('Android')>-1||UserAgentT.indexOf('iPhone')>-1||UserAgentT.indexOf('iPad')>-1||UserAgentT.indexOf('iPod')>-1||UserAgentT.indexOf('Symbian')>-1){
+                $('body').css('overflow-y','hidden');
+                $('#main-holder').css('zoom','2.4');
+                $('#tab-common').css('line-height','1.5');
+                $('#tab-bookmarks').css('line-height','1.5');
+                $('#tab-friends').css('line-height','1.5');
+                $('.juicy.cards').css('display','block');
+                $('.juicy.cards .card').css('width','calc(100% - .5em)');
+                $('.juicy.cards .card').css('line-height','1.6');
+                $('.juicy.cards .card').css('margin-top','.85em');
+                $('.juicy.cards .card:first-of-type').css('margin-top','0px');
+                $('.juicy.cards .card').css('margin-bottom','.85em');
+                $('.juicy.cards .card:last-of-type').css('margin-bottom','0px');
+                $('.juicy.cards .card>.content.extra').css('height','1em');
+                $('.juicy.cards .card>.content.extra>.date.right').css('line-height','1.2');
+                $('.button-selects.teal').css('padding-top','.5em');
+                $('.button-selects.teal').css('padding-bottom','.5em');
+                $('#bottom-time').css('display','none');
+                $('#main-large-search').css('height','65px');
+                $('#main-over-top').css('height','20px');
+                $('.main-tabs').css('overflow-y','auto');
+                $('.main-tabs').css('position','fixed');
+                $('.main-tabs').css('top','160px');
+                $('.main-tabs').css('max-height','calc(100% - 205px)');
+                $('.main-tabs').css('left','5.7%');
+                $('.main-tabs').css('right','5.7%');
+                $('#search_form').css('min-width','360px');
+                $('#search_form').css('width','90%');
+                $('#main-large-links').css('min-width','360px');
+                $('#main-header').css('display','none');
+            }
+            if((String(navigator.platform).indexOf("Linux")>-1)){
+                $('.button-selects.teal').css('padding-top','.5em');
+                $('.button-selects.teal').css('padding-bottom','.2em');
+                if(navigator.userAgent.indexOf('Firefox')>=0){
+                    $('.button-selects.teal').css('padding-top','.2em');
+                    $('.button-selects.teal').css('padding-bottom','.4em');
+                }
+            }
+            document.getElementById("main-body").style.visibility="visible";
+            function getUrlParam(name){
+                var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+                var r=window.location.search.substr(1).match(reg);
+                if(r!=null)return unescape(decodeURI(r[2]));
+                return null;
+            }
+            var reg=/^\s*$/,url_e=getUrlParam("e"),url_q=getUrlParam("q"),url_jump_temp=getUrlParam("jump");
+            if(url_q===null)url_q="";
+            var q_before=url_q.split(":")[0];
+            var q_after=url_q;
+            if(name_to_id(q_before)!=-1&&url_jump_temp=="yes")q_after=url_q.substr(q_before.length+1);
+            if(url_jump_temp=="yes"){
+                var url_jump,key_final=path_encode(q_after.replace(/\+/g,' '));
+                url_jump=get_url_jump(name_to_id(q_before),key_final);
+                if(key_final!="")window.location.href=url_jump;
+            }
+            if(!(localStorage.getItem("default_engine")===null))set_default_engine(localStorage.getItem("default_engine"),0);
+            if(url_e===null){
+                if(localStorage.getItem("engine")===null)default_engine();
+                else{
+                    url_e=localStorage.getItem("engine");
+                    set_engine(url_e);
+                }
+            }else set_engine(url_e);
+            document.getElementById("search_box").value=q_after.replace(/\+/g,' ');
+            var temp_path_name=window.location.pathname;
+            if(window.location.pathname=="/bookmarks")page_pos='bookmarks';
+            else if(window.location.pathname=="/friends")page_pos="friends";
+            else if(window.location.pathname=="/about")page_pos="about";
+            else if(window.location.pathname=="/setting")page_pos="setting";
+            else if(window.location.pathname=="/news")page_pos="news";
+            else page_pos="";
+            $(".top-bar-header").removeClass("active");
+            $(".main-tabs").removeClass("active");
+            if(page_pos=="")$("#bar-common").addClass("active"),$("#tab-common").addClass("active");
+            else $("#bar-"+page_pos).addClass("active"),$("#tab-"+page_pos).addClass("active");
+            // document.getElementById("search_box_top").value=q_after.replace(/\+/g,' ');
+            url_replace();
+        }
+        function siteTime(){
+            window.setTimeout("siteTime()",1000);
+            var seconds=1000;
+            var minutes=seconds*60;
+            var hours=minutes*60;
+            var days=hours*24;
+            var years=days*365;
+            var today=new Date();
+            var todayYear=today.getFullYear();
+            var todayMonth=today.getMonth()+1;
+            var todayDate=today.getDate();
+            var todayHour=today.getHours();
+            var todayMinute=today.getMinutes();
+            var todaySecond=today.getSeconds();
+            var t1=Date.UTC(2020,06,01,00,00,00);
+            var t2=Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+            var diff=t2-t1;
+            var diffYears=Math.floor(diff/years);
+            var diffDays=Math.floor((diff/days)-diffYears*365);
+            var diffHours=Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+            var diffMinutes=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+            var diffSeconds=Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+            $('#sitetime').attr("data-time","已在风雨中度过 "+(diffYears*365+diffDays)+" 天 "+diffHours+" 小时 "+diffMinutes+" 分 "+diffSeconds+" 秒");
+        }
+        siteTime();
+    </script>
+</body>
+</html>
