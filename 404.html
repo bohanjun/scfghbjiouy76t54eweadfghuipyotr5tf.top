@@ -685,8 +685,8 @@
             +(document.getElementById("search_box").value!=""?(engine_id!=-1&&engine_id!=default_engine_id?"&":"?")
             +"q="+path_encode(document.getElementById("search_box").value):"");
             if(document.domain=="")console.log(temp_url);
-            else history.replaceState({},get_pos_title_before()+"Pi Search · 搜索派",temp_url);
-            $("title").text(get_pos_title_before()+"Pi Search · 搜索派");
+            else history.replaceState({},get_pos_title_before()+"Zhango Search",temp_url);
+            $("title").text(get_pos_title_before()+"Zhango Search");
         }
         function get_url(){
             return path_obj+page_pos
